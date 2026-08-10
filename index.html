@@ -1,1 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Listia — Listas y reseñas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- BARRA SUPERIOR -->
+    <header class="topbar">
+
+        <div class="logo">
+            Listia
+        </div>
+
+        <div class="search">
+            <input 
+                type="text" 
+                id="searchInput"
+                placeholder="Buscar listas, productos..."
+            >
+        </div>
+
+        <div class="profile">
+            <div class="avatar">F</div>
+        </div>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <nav>
+
+                <button class="nav-item active">
+                    🏠 Inicio
+                </button>
+
+                <button class="nav-item">
+                    🔥 Explorar
+                </button>
+
+                <button class="nav-item">
+                    ⭐ Reseñas
+                </button>
+
+                <button class="nav-item">
+                    🛒 Mis listas
+                </button>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <button class="nav-item">
+                    ⚙️ Configuración
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- FEED -->
+        <section class="feed">
+
+            <div class="feed-header">
+
+                <div>
+                    <h1>Descubre listas</h1>
+                    <p>Encuentra productos recomendados por otras personas.</p>
+                </div>
+
+                <button class="create-button" id="createList">
+                    + Crear lista
+                </button>
+
+            </div>
+
+
+            <!-- LISTA 1 -->
+            <article class="list-card">
+
+                <div class="card-user">
+
+                    <div class="avatar small">
+                        A
+                    </div>
+
+                    <div>
+                        <strong>Alex</strong>
+                        <span>@alexshopping</span>
+                    </div>
+
+                </div>
+
+
+                <h2>🛒 Compra semanal</h2>
+
+                <p class="description">
+                    Lo que normalmente compro para tener comida durante toda la semana.
+                </p>
+
+
+                <div class="products">
+
+                    <div class="product">
+                        🥛
+                        <span>Leche</span>
+                    </div>
+
+                    <div class="product">
+                        🍞
+                        <span>Pan</span>
+                    </div>
+
+                    <div class="product">
+                        🥚
+                        <span>Huevos</span>
+                    </div>
+
+                    <div class="product">
+                        ☕
+                        <span>Café</span>
+                    </div>
+
+                </div>
+
+
+                <div class="rating">
+                    ⭐ <strong>4.8</strong>
+                    <span>· 24 reseñas</span>
+                </div>
+
+
+                <div class="card-actions">
+
+                    <button class="like-button">
+                        ♡ <span>124</span>
+                    </button>
+
+                    <button>
+                        💬 18
+                    </button>
+
+                    <button>
+                        Compartir
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- LISTA 2 -->
+            <article class="list-card">
+
+                <div class="card-user">
+
+                    <div class="avatar small">
+                        M
+                    </div>
+
+                    <div>
+                        <strong>María</strong>
+                        <span>@maria</span>
+                    </div>
+
+                </div>
+
+
+                <h2>🍕 La pizza perfecta</h2>
+
+                <p class="description">
+                    Ingredientes para hacer pizza en casa. Estos son mis favoritos.
+                </p>
+
+
+                <div class="products">
+
+                    <div class="product">
+                        🍅
+                        <span>Tomate</span>
+                    </div>
+
+                    <div class="product">
+                        🧀
+                        <span>Queso</span>
+                    </div>
+
+                    <div class="product">
+                        🌾
+                        <span>Harina</span>
+                    </div>
+
+                    <div class="product">
+                        🫒
+                        <span>Aceite</span>
+                    </div>
+
+                </div>
+
+
+                <div class="rating">
+                    ⭐ <strong>4.6</strong>
+                    <span>· 17 reseñas</span>
+                </div>
+
+
+                <div class="card-actions">
+
+                    <button class="like-button">
+                        ♡ <span>89</span>
+                    </button>
+
+                    <button>
+                        💬 12
+                    </button>
+
+                    <button>
+                        Compartir
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- COLUMNA DERECHA -->
+        <aside class="right-sidebar">
+
+            <div class="panel">
+
+                <h3>🔥 Tendencias</h3>
+
+                <div class="trend">
+                    <strong>#supermercado</strong>
+                    <span>1.2k listas</span>
+                </div>
+
+                <div class="trend">
+                    <strong>#gaming</strong>
+                    <span>843 listas</span>
+                </div>
+
+                <div class="trend">
+                    <strong>#cocina</strong>
+                    <span>721 listas</span>
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+
+                <h3>⭐ Mejor valoradas</h3>
+
+                <p>☕ Café molido</p>
+                <p>🍕 Pizza casera</p>
+                <p>🎧 Auriculares</p>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- MODAL CREAR LISTA -->
+
+    <div class="modal hidden" id="listModal">
+
+        <div class="modal-content">
+
+            <button class="close" id="closeModal">
+                ×
+            </button>
+
+            <h2>Crear una lista</h2>
+
+            <input 
+                type="text"
+                id="listName"
+                placeholder="Nombre de la lista"
+            >
+
+            <textarea
+                id="listDescription"
+                placeholder="Describe tu lista..."
+            ></textarea>
+
+            <button class="create-button" id="saveList">
+                Crear lista
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
